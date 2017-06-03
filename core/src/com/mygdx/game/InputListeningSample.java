@@ -1,19 +1,23 @@
 package com.mygdx.game;
 
-import com.badlogic.gdx.*;
-import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.Application;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Logger;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import common.SampleBase;
+import common.SampleInfo;
+import utils.GdxUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InputListeningSample extends ApplicationAdapter implements InputProcessor {
+public class InputListeningSample extends SampleBase {
     private static final Logger LOGGER = new Logger(InputListeningSample.class.getName(), Logger.DEBUG);
+    public static final SampleInfo SAMPLE_INFO = new SampleInfo(InputListeningSample.class);
 
     private OrthographicCamera camera;
     private Viewport viewport;
@@ -24,10 +28,10 @@ public class InputListeningSample extends ApplicationAdapter implements InputPro
     private final List<String> messages = new ArrayList<String>();
 
 
-	private void addMessage(String message){
+    private void addMessage(String message) {
         messages.add(message);
 
-        if(messages.size() > MAX_MESSAGE_COUNT){
+        if (messages.size() > MAX_MESSAGE_COUNT) {
             messages.remove(0);
         }
     }
@@ -97,43 +101,42 @@ public class InputListeningSample extends ApplicationAdapter implements InputPro
     }
 
     @Override
-	public void create () {
-		// used to initialize game and load resources
-		Gdx.app.setLogLevel(Application.LOG_DEBUG);
+    public void create() {
+        // used to initialize game and load resources
+        Gdx.app.setLogLevel(Application.LOG_DEBUG);
 
-		camera = new OrthographicCamera();
-		viewport = new FitViewport(1080, 720, camera);
-		batch = new SpriteBatch();
-		font = new BitmapFont(Gdx.files.internal("fonts/oswald-32.fnt"));
+        camera = new OrthographicCamera();
+        viewport = new FitViewport(1080, 720, camera);
+        batch = new SpriteBatch();
+        font = new BitmapFont(Gdx.files.internal("fonts/oswald-32.fnt"));
 
-		Gdx.input.setInputProcessor(this);
-	}
+        Gdx.input.setInputProcessor(this);
+    }
 
     @Override
-    public void resize (int width, int height) {
+    public void resize(int width, int height) {
         viewport.update(width, height, true);
     }
 
     @Override
-	public void render () {
-		Gdx.gl.glClearColor(0.5f, 0, 0, 1.0f);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+    public void render() {
+        GdxUtils.clearScreen();
 
-		batch.setProjectionMatrix(camera.combined);
-		batch.begin();
-		draw();
-		batch.end();
-	}
+        batch.setProjectionMatrix(camera.combined);
+        batch.begin();
+        draw();
+        batch.end();
+    }
 
-	private void draw(){
+    private void draw() {
         for (int i = 0; i < messages.size(); i++) {
-            font.draw(batch, messages.get(i), 20, 720-40*(i+1));
+            font.draw(batch, messages.get(i), 20, 720 - 40 * (i + 1));
         }
     }
 
-	@Override
-	public void dispose () {
-		batch.dispose();
+    @Override
+    public void dispose() {
+        batch.dispose();
         font.dispose();
-	}
+    }
 }

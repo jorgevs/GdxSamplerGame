@@ -2,11 +2,11 @@ package com.mygdx.game.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.mygdx.game.GdxSamplerGame;
+import com.mygdx.game.GdxGeneratedSample;
 
-public class DesktopLauncher {
+public class DesktopLauncherGdxGenerated {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new GdxSamplerGame(), config);
+		new LwjglApplication(new GdxGeneratedSample(), config);
 	}
 }

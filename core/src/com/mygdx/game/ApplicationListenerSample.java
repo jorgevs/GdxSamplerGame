@@ -1,12 +1,14 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Application;
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.Logger;
+import common.SampleBase;
+import common.SampleInfo;
 
-public class ApplicationListenerSample implements ApplicationListener {
+public class ApplicationListenerSample extends SampleBase {
     private static final Logger LOGGER = new Logger(ApplicationListenerSample.class.getName(), Logger.DEBUG);
+    public static final SampleInfo SAMPLE_INFO = new SampleInfo(ApplicationListenerSample.class);
 
     private boolean renderInterrupted = true;
 
@@ -27,7 +29,7 @@ public class ApplicationListenerSample implements ApplicationListener {
     @Override
     public void render() {
         // used to update and render the game elements (called 60 times per second)
-        if(renderInterrupted) {
+        if (renderInterrupted) {
             LOGGER.debug("render()");
             renderInterrupted = false;
         }
