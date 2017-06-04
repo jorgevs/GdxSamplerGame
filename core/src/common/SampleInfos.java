@@ -10,11 +10,14 @@ import java.util.List;
 public class SampleInfos {
 
     public static final List<SampleInfo> ALL = Arrays.asList(
-            ApplicationListenerSample.SAMPLE_INFO,
             GdxGeneratedSample.SAMPLE_INFO,
-            GdxReflectionSample.SAMPLE_INFO,
+            ApplicationListenerSample.SAMPLE_INFO,
+            InputPollingSample.SAMPLE_INFO,
             InputListeningSample.SAMPLE_INFO,
-            InputPollingSample.SAMPLE_INFO
+            GdxReflectionSample.SAMPLE_INFO,
+            OrthographicCameraSample.SAMPLE_INFO,
+            ViewportSample.SAMPLE_INFO,
+            SpriteBatchSample.SAMPLE_INFO
     );
 
     private SampleInfos() {
@@ -27,7 +30,7 @@ public class SampleInfos {
             ret.add(info.getName());
         }
 
-        Collections.sort(ret);
+        //Collections.sort(ret);
         return ret;
     }
 

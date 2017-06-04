@@ -2,7 +2,6 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -56,24 +55,7 @@ public class GdxReflectionSample extends SampleBase {
     }
 
     private void draw() {
-        // mouse touch x/y
-        int mouseX = Gdx.input.getX();
-        int mouseY = Gdx.input.getY();
-
-        boolean leftPressed = Gdx.input.isButtonPressed(Input.Buttons.LEFT);
-        boolean rightPressed = Gdx.input.isButtonPressed(Input.Buttons.RIGHT);
-
-        font.draw(batch, "x: " + mouseX + " y: " + mouseY, 20, 720 - 20);
-        font.draw(batch, leftPressed ? "Left button pressed" : "Left button not pressed", 20, 720 - 50);
-        font.draw(batch, rightPressed ? "Right button pressed" : "Right button not pressed", 20, 720 - 80);
-
-        // keyboard keys
-        boolean wPressed = Gdx.input.isKeyPressed(Input.Keys.W);
-        boolean sPressed = Gdx.input.isKeyPressed(Input.Keys.S);
-
-        font.draw(batch, wPressed ? "W is pressed" : "W is not pressed", 20, 720 - 110);
-        font.draw(batch, sPressed ? "S is pressed" : "S is not pressed", 20, 720 - 140);
-
+        font.draw(batch, "Reflection sample", 20, 720 - 20);
     }
 
     @Override

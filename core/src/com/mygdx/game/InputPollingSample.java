@@ -66,7 +66,6 @@ public class InputPollingSample extends SampleBase {
 
         font.draw(batch, wPressed ? "W is pressed" : "W is not pressed", 20, 720 - 110);
         font.draw(batch, sPressed ? "S is pressed" : "S is not pressed", 20, 720 - 140);
-
     }
 
     @Override

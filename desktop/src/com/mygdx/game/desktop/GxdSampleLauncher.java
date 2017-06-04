@@ -2,7 +2,6 @@ package com.mygdx.game.desktop;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas;
-import com.badlogic.gdx.utils.reflect.ClassReflection;
 import common.SampleFactory;
 import common.SampleInfos;
 
@@ -22,8 +21,8 @@ public class GxdSampleLauncher extends JFrame {
     // enable us to embed libgdx app/game into java desktop app
     private LwjglAWTCanvas lwjglAWTCanvas;
 
-    private JList sampleList;
     private JPanel controlPanel;
+    private JList sampleList;
 
 
     public GxdSampleLauncher() throws HeadlessException {
