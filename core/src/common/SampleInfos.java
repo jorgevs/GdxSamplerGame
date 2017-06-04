@@ -17,7 +17,8 @@ public class SampleInfos {
             GdxReflectionSample.SAMPLE_INFO,
             OrthographicCameraSample.SAMPLE_INFO,
             ViewportSample.SAMPLE_INFO,
-            SpriteBatchSample.SAMPLE_INFO
+            SpriteBatchSample.SAMPLE_INFO,
+            ShapeRendererSample.SAMPLE_INFO
     );
 
     private SampleInfos() {
