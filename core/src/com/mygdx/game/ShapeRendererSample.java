@@ -64,12 +64,12 @@ public class ShapeRendererSample extends SampleBase {
         int worldWidth = (int) WORLD_WIDTH;
         int worldHeight = (int) WORLD_HEIGHT;
 
-        for (int i = -worldWidth; i < worldWidth; i++) {
-            renderer.line(i, -worldHeight, i, worldHeight);
+        for (int x = -worldWidth; x < worldWidth; x++) {
+            renderer.line(x, -worldHeight, x, worldHeight);
         }
 
-        for (int i = -worldHeight; i < worldHeight; i++) {
-            renderer.line(-worldWidth, i, worldWidth, i);
+        for (int y = -worldHeight; y < worldHeight; y++) {
+            renderer.line(-worldWidth, y, worldWidth, y);
         }
 
         renderer.setColor(Color.BLUE);
