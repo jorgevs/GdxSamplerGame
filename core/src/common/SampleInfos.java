@@ -20,7 +20,8 @@ public class SampleInfos {
             SpriteBatchSample.SAMPLE_INFO,
             ShapeRendererSample.SAMPLE_INFO,
             BitmapFontSample.SAMPLE_INFO,
-            PoolingSample.SAMPLE_INFO
+            PoolingSample.SAMPLE_INFO,
+            AssetManagerSample.SAMPLE_INFO
     );
 
     private SampleInfos() {
