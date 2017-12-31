@@ -24,7 +24,9 @@ public class SampleInfos {
             AssetManagerSample.SAMPLE_INFO,
             TextureAtlasSample.SAMPLE_INFO,
             CustomActorSample.SAMPLE_INFO,
-            ActionsSample.SAMPLE_INFO
+            ActionsSample.SAMPLE_INFO,
+            TableSample.SAMPLE_INFO,
+            SkinSample.SAMPLE_INFO
     );
 
     private SampleInfos() {
@@ -37,7 +39,7 @@ public class SampleInfos {
             ret.add(info.getName());
         }
 
-        //Collections.sort(ret);
+        Collections.sort(ret);
         return ret;
     }
 

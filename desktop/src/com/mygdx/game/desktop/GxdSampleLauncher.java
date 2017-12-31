@@ -8,6 +8,7 @@ import common.SampleInfos;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Collections;
 
 public class GxdSampleLauncher extends JFrame {
 
@@ -76,6 +77,8 @@ public class GxdSampleLauncher extends JFrame {
 
         //sampleList = new JList(new String[]{"com.mygdx.game.InputPollingSample"});
         sampleList = new JList(SampleInfos.getSampleNames().toArray());
+
+
 
         sampleList.setFixedCellWidth(CELL_WIDTH);
         sampleList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);

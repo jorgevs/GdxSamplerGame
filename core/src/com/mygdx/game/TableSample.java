@@ -4,9 +4,8 @@ import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Logger;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -15,10 +14,10 @@ import common.SampleBase;
 import common.SampleInfo;
 import utils.GdxUtils;
 
-public class CustomActorSample extends SampleBase {
-    private static final Logger LOGGER = new Logger(CustomActorSample.class.getName(), Logger.DEBUG);
+public class TableSample extends SampleBase {
+    private static final Logger LOGGER = new Logger(TableSample.class.getName(), Logger.DEBUG);
 
-    public static final SampleInfo SAMPLE_INFO = new SampleInfo(CustomActorSample.class);
+    public static final SampleInfo SAMPLE_INFO = new SampleInfo(TableSample.class);
 
     private static final float WORLD_WIDTH = 1080f;
     private static final float WORLD_HEIGHT = 720f;
@@ -38,19 +37,26 @@ public class CustomActorSample extends SampleBase {
 
         texture = new Texture(Gdx.files.internal("raw/custom-actor.png"));
 
-        CustomActor customActor = new CustomActor(new TextureRegion(texture));
-        customActor.setSize(160, 80);
-        customActor.setPosition((WORLD_WIDTH - customActor.getWidth()) / 2, (WORLD_HEIGHT - customActor.getHeight()) / 2);
+        initUI();
+    }
 
-        customActor.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                LOGGER.debug("CustomActor clicked event: " + event + " x: " + x + " y: " + y);
-            }
-        });
+    private void initUI() {
+        Table table = new Table();
+        table.defaults().space(20);
 
-        stage.addActor(customActor);
-        Gdx.input.setInputProcessor(stage);
+        for (int i = 0; i < 6; i++) {
+            CustomActor customActor = new CustomActor(new TextureRegion(texture));
+            // need to set size, default width/height is 0
+            customActor.setSize(180, 60);
+            table.add(customActor);
+            table.row();
+        }
+
+        table.center();
+        table.setFillParent(true);
+        table.pack();
+        stage.addActor(table);
+        stage.setDebugAll(true);
     }
 
     @Override

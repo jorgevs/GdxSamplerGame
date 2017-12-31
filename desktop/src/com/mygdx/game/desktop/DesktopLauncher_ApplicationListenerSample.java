@@ -4,7 +4,7 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.mygdx.game.ApplicationListenerSample;
 
-public class DesktopLauncherApplicationListener {
+public class DesktopLauncher_ApplicationListenerSample {
 
     public static void main(String[] argv) {
         LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
