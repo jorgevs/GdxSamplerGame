@@ -17,8 +17,8 @@ public class ViewportSample extends SampleBase {
     private static final Logger LOGGER = new Logger(ViewportSample.class.getName(), Logger.DEBUG);
     public static final SampleInfo SAMPLE_INFO = new SampleInfo(ViewportSample.class);
 
-    private static final float WORLD_WITH = 800.0f;
-    private static final float WORLD_HEIGHT = 600.0f;
+    private static final float WORLD_WITH = 800.0f;   // World units
+    private static final float WORLD_HEIGHT = 600.0f; // World units
 
     private OrthographicCamera camera;
     private Viewport currentViewport;
@@ -85,6 +85,7 @@ public class ViewportSample extends SampleBase {
         currentViewportIndex = (currentViewportIndex + 1) % viewports.size;
         currentViewport = viewports.getValueAt(currentViewportIndex);
         currentViewportName = viewports.getKeyAt(currentViewportIndex);
+
         currentViewport.update(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 
         LOGGER.debug("Viewport selected: " + currentViewportName);

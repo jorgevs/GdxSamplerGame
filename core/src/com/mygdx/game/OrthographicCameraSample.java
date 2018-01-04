@@ -17,8 +17,8 @@ public class OrthographicCameraSample extends SampleBase {
     private static final Logger LOGGER = new Logger(OrthographicCameraSample.class.getName(), Logger.DEBUG);
     public static final SampleInfo SAMPLE_INFO = new SampleInfo(OrthographicCameraSample.class);
 
-    private static final float WORLD_WIDTH = 10.8f; // world units
-    private static final float WORLD_HEIGHT = 7.2f; // world units
+    private static final float WORLD_WIDTH = 10.8f; // world units : (1280 - 200) / 100 = 10.8
+    private static final float WORLD_HEIGHT = 7.2f; // world units : (720) / 100 = 7.2
 
     private static final float CAMERA_SPEED = 2.0f; // world units
     private static final float CAMERA_ZOOM_SPEED = 2.0f; // world units

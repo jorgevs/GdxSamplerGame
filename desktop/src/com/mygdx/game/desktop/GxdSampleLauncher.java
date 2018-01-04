@@ -8,7 +8,7 @@ import common.SampleInfos;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Collections;
+
 
 public class GxdSampleLauncher extends JFrame {
 
@@ -38,7 +38,6 @@ public class GxdSampleLauncher extends JFrame {
             }
         });
     }
-
 
     private void init() {
         createControlPanel();
@@ -77,9 +76,6 @@ public class GxdSampleLauncher extends JFrame {
 
         //sampleList = new JList(new String[]{"com.mygdx.game.InputPollingSample"});
         sampleList = new JList(SampleInfos.getSampleNames().toArray());
-
-
-
         sampleList.setFixedCellWidth(CELL_WIDTH);
         sampleList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         sampleList.addMouseListener(new MouseAdapter() {
@@ -129,16 +125,6 @@ public class GxdSampleLauncher extends JFrame {
             lwjglAWTCanvas.stop();
             container.remove(lwjglAWTCanvas.getCanvas());
         }
-
-        /*ApplicationListener sample;
-        try {
-            // get class object by name
-            Class<ApplicationListener> clazz = ClassReflection.forName(name);
-            // create new instance of out sample class
-            sample = ClassReflection.newInstance(clazz);
-        } catch (Exception e) {
-            throw new RuntimeException("Cannot create sample: " + name, e);
-        }*/
 
         ApplicationListener sample = SampleFactory.newSample(name);
 
