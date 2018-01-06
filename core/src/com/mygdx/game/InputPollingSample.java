@@ -17,8 +17,6 @@ public class InputPollingSample extends SampleBase {
     private static final Logger LOGGER = new Logger(InputPollingSample.class.getName(), Logger.DEBUG);
     public static final SampleInfo SAMPLE_INFO = new SampleInfo(InputPollingSample.class);
 
-    private OrthographicCamera camera;
-    private Viewport viewport;
     private SpriteBatch batch;
     private BitmapFont font;
 
@@ -27,22 +25,19 @@ public class InputPollingSample extends SampleBase {
         // used to initialize game and load resources
         Gdx.app.setLogLevel(Application.LOG_DEBUG);
 
-        camera = new OrthographicCamera();
-        viewport = new FitViewport(1080, 720, camera);
         batch = new SpriteBatch();
         font = new BitmapFont(Gdx.files.internal("fonts/oswald-32.fnt"));
     }
 
     @Override
     public void resize(int width, int height) {
-        viewport.update(width, height, true);
+
     }
 
     @Override
     public void render() {
         GdxUtils.clearScreen();
 
-        batch.setProjectionMatrix(camera.combined);
         batch.begin();
         draw();
         batch.end();

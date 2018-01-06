@@ -17,8 +17,8 @@ public class ShapeRendererSample extends SampleBase {
     private static final Logger LOGGER = new Logger(ShapeRendererSample.class.getName(), Logger.DEBUG);
     public static final SampleInfo SAMPLE_INFO = new SampleInfo(ShapeRendererSample.class);
 
-    private static final float WORLD_WIDTH = 40f;
-    private static final float WORLD_HEIGHT = 20f;
+    private static final float WORLD_WIDTH = 40f;   // world units
+    private static final float WORLD_HEIGHT = 20f;  // world units
 
     private OrthographicCamera camera;
     private Viewport viewport;
