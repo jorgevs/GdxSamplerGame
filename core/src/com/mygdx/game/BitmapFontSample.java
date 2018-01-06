@@ -14,8 +14,8 @@ import utils.GdxUtils;
 public class BitmapFontSample extends SampleBase {
     public static final SampleInfo SAMPLE_INFO = new SampleInfo(BitmapFontSample.class);
 
-    private static final float WIDTH = 1080f;
-    private static final float HEIGHT = 720f;
+    private static final float WIDTH = 1080f;   // World units
+    private static final float HEIGHT = 720f;   // World units
 
     private OrthographicCamera camera;
     private Viewport viewport;

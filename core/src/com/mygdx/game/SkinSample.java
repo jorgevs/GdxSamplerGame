@@ -29,8 +29,8 @@ public class SkinSample extends SampleBase {
 
     private static final String UI_SKIN = "ui/uiskin.json";
 
-    private static final float WORLD_WIDTH = 1080f;
-    private static final float WORLD_HEIGHT = 720f;
+    private static final float WORLD_WIDTH = 1080f;   // World units
+    private static final float WORLD_HEIGHT = 720f;   // World units
 
 
     private Viewport viewport;

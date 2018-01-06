@@ -20,8 +20,8 @@ public class CustomActorSample extends SampleBase {
 
     public static final SampleInfo SAMPLE_INFO = new SampleInfo(CustomActorSample.class);
 
-    private static final float WORLD_WIDTH = 1080f;
-    private static final float WORLD_HEIGHT = 720f;
+    private static final float WORLD_WIDTH = 1080f;  // World units
+    private static final float WORLD_HEIGHT = 720f;  // World units
 
 
     private Viewport viewport;
