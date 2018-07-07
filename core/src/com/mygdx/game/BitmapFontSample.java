@@ -21,7 +21,6 @@ public class BitmapFontSample extends SampleBase {
     private Viewport viewport;
     private SpriteBatch batch;
     private BitmapFont effectFont;
-    private BitmapFont wrappedFont;
     private BitmapFont uiFont;
     private BitmapFont markupFont;
     private GlyphLayout glyphLayout;
@@ -32,7 +31,6 @@ public class BitmapFontSample extends SampleBase {
         viewport = new FitViewport(WIDTH, HEIGHT, camera);
         batch = new SpriteBatch();
         effectFont = new BitmapFont(Gdx.files.internal("fonts/effect_font_32.fnt"));
-        wrappedFont = new BitmapFont(Gdx.files.internal("fonts/effect_font_32.fnt"));
         uiFont = new BitmapFont(Gdx.files.internal("fonts/ui_font_32.fnt"));
         markupFont = new BitmapFont(Gdx.files.internal("fonts/ui_font_32.fnt"));
         markupFont.getData().markupEnabled = true;

@@ -32,7 +32,6 @@ public class SkinSample extends SampleBase {
     private static final float WORLD_WIDTH = 1080f;   // World units
     private static final float WORLD_HEIGHT = 720f;   // World units
 
-
     private Viewport viewport;
     private Stage stage;
     private AssetManager assetManager;
@@ -47,7 +46,7 @@ public class SkinSample extends SampleBase {
         assetManager.load(UI_SKIN, Skin.class);
         assetManager.finishLoading();
 
-        viewport = new FitViewport(1080, 720);
+        viewport = new FitViewport(WORLD_WIDTH, WORLD_HEIGHT);
         stage = new Stage(viewport);
 
         skin = assetManager.get(UI_SKIN);
