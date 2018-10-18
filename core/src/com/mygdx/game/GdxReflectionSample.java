@@ -37,7 +37,7 @@ public class GdxReflectionSample extends SampleBase {
 
     @Override
     public void resize(int width, int height) {
-
+        // Nothing here
     }
 
     @Override

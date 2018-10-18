@@ -78,9 +78,7 @@ public class TextureAtlasSample extends SampleBase {
     public void render() {
         batch.setProjectionMatrix(camera.combined);
         batch.begin();
-
         draw();
-
         batch.end();
     }
 

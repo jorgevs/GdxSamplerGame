@@ -70,10 +70,9 @@ public class AssetManagerSample extends SampleBase {
     @Override
     public void render() {
         batch.setProjectionMatrix(camera.combined);
+
         batch.begin();
-
         draw();
-
         batch.end();
     }
 
@@ -88,10 +87,5 @@ public class AssetManagerSample extends SampleBase {
     public void dispose() {
         batch.dispose();
         assetManager.dispose();
-
-        // backgroundBlue.dispose();
-        // greenCircle.dispose();
-        // redCircle.dispose();
-        // font.dispose();
     }
 }

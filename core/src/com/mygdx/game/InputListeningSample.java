@@ -2,12 +2,9 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Logger;
-import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.badlogic.gdx.utils.viewport.Viewport;
 import common.SampleBase;
 import common.SampleInfo;
 import utils.GdxUtils;
@@ -111,7 +108,7 @@ public class InputListeningSample extends SampleBase {
 
     @Override
     public void resize(int width, int height) {
-        //viewport.update(width, height, true);
+        // Nothing here
     }
 
     @Override
